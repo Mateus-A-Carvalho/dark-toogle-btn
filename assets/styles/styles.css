@@ -3,7 +3,7 @@
   --bgc-light-mode: rgb(255, 255, 249, .7);
 }
 
-:root .dark-mode {
+.dark-mode:root {
   --div-bcg-dark-mode: rgb(255, 255, 249, .7);
   --bgc-dark-mode: rgb(15, 15, 15);
 }
