@@ -1,0 +1,58 @@
+:root {
+  --div-bcg-light-mode: rgba(190, 182, 182, .7);
+  --bgc-light-mode: rgb(255, 255, 249, .7);
+}
+
+:root .dark-mode {
+  --div-bcg-dark-mode: rgb(255, 255, 249, .7);
+  --bgc-dark-mode: rgb(15, 15, 15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* Utility Classes */
+/* Utility Classes */
+
+html {
+  height: 100vh;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  font-size: 1.8rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bgc-dark-mode);
+}
+
+input {
+  display: none;
+}
+
+div.btn-wrapper {
+  width: 13rem;
+  height: auto;
+  box-shadow:  8px 8px 23px rgb(119, 116, 116),
+              -8px -8px 23px rgb(255, 255, 255);
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 9999px;
+  background-color: var(--div-bcg-light-mode)
+}
+
+i.fa-regular {
+  font-size: 2.5em;
+  cursor: pointer;
+}
+
