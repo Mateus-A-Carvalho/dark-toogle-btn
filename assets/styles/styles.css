@@ -1,11 +1,15 @@
 :root {
-  --div-bcg-light-mode: rgba(190, 182, 182, .7);
-  --bgc-light-mode: rgb(255, 255, 249, .7);
+  --div-bcg-dark-mode: rgba(190, 182, 182, .7);
+  --bgc-dark-mode: rgb(255, 255, 249, .7);
+  --box-shadow: 
+      .8rem .8rem 2.3rem rgb(119, 116, 116),
+      -.8rem -.8rem 2.3rem rgb(255, 255, 255);
 }
 
 .dark-mode:root {
   --div-bcg-dark-mode: rgb(255, 255, 249, .7);
   --bgc-dark-mode: rgb(15, 15, 15);
+  --box-shadow: .8rem .8rem 2.3rem rgba(233, 233, 233, .3)
 }
 
 * {
@@ -33,22 +37,17 @@ body {
   background-color: var(--bgc-dark-mode);
 }
 
-input {
-  display: none;
-}
-
 div.btn-wrapper {
   width: 13rem;
   height: auto;
-  box-shadow:  8px 8px 23px rgb(119, 116, 116),
-              -8px -8px 23px rgb(255, 255, 255);
+  box-shadow:  var(--box-shadow);
   padding: 0.5rem 1rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   border-radius: 9999px;
-  background-color: var(--div-bcg-light-mode)
+  background-color: var(--div-bcg-dark-mode)
 }
 
 i.fa-regular {
