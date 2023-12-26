@@ -20,6 +20,13 @@
 }
 
 /* Utility Classes */
+.desable {
+  display: block;
+}
+
+.enable {
+  display: none;
+}
 /* Utility Classes */
 
 html {
@@ -47,11 +54,10 @@ div.btn-wrapper {
   justify-content: space-between;
   align-items: center;
   border-radius: 9999px;
-  background-color: var(--div-bcg-dark-mode)
+  background-color: var(--div-bcg-dark-mode);
 }
 
 i.fa-regular {
   font-size: 2.5em;
   cursor: pointer;
 }
-
