@@ -1,16 +1,3 @@
-:root {
-  --div-bcg-dark-mode: rgba(190, 182, 182, .7);
-  --bgc-dark-mode: rgb(255, 255, 249, .7);
-  --box-shadow: 
-      .8rem .8rem 2.3rem rgb(119, 116, 116),
-      -.8rem -.8rem 2.3rem rgb(255, 255, 255);
-}
-
-.dark-mode:root {
-  --div-bcg-dark-mode: rgb(255, 255, 249, .7);
-  --bgc-dark-mode: rgb(15, 15, 15);
-  --box-shadow: .8rem .8rem 2.3rem rgba(233, 233, 233, .3)
-}
 
 * {
   margin: 0;
@@ -30,7 +17,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bgc-dark-mode);
+  background-color: whitesmoke;
+  transition: background-color .5s ease-in-out;
 }
 
 input {
@@ -39,20 +27,51 @@ input {
 
 .label {
   width: 13rem;
-  height: auto;
-  border: 1px solid #000;
+  height: 6rem;
   padding: .5rem 1rem;
   border-radius: 9999px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: rgba(190, 182, 182, .7);
+  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, .3);
+  position: relative;
+  cursor: pointer;
 }
 
 i.fa-regular {
-  font-size: 2.5em;
+  font-size: 2.3em;
+}
+
+i.moon {
+  color: rgba(0, 45, 179);
+}
+
+i.sun {
+  color: yellow;
 }
 
 .circle {
   position: absolute;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  left: .8rem;
+  animation: toggleOff .5s cubic-bezier(.7,-0.41,.42,1.33) forwards;
+  transition: background-color .5s ease-in-out;
 }
 
+input:checked + .label .circle {
+  animation: toggleOn .5s cubic-bezier(.7,-0.41,.42,1.33) forwards;
+}
+
+@keyframes toggleOn {
+  0% { transform: translateX(0);}
+  100% { transform: translateX(66px);}
+}
+
+@keyframes toggleOff {
+  0% { transform: translateX(66px);}
+  100% { transform: translateX(0px);}
+}
